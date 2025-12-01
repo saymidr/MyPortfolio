@@ -15,7 +15,7 @@ export const Contact: React.FC = () => {
       </div>
 
       <div>
-        <h2 className="text-6xl font-bold mb-6">Ready to Scale?</h2>
+        <h2 className="text-6xl font-bold mb-6 text-accent-pink">Ready to Scale?</h2>
         <p className="font-sans text-xl text-gray-700 max-w-xl mx-auto">
           I'm currently accepting new clients for long-term partnerships. Let's create something awesome.
         </p>
@@ -58,13 +58,15 @@ export const Contact: React.FC = () => {
 
       <div className="flex justify-center gap-6 pt-8">
         {[
-            { icon: <Instagram />, label: "Instagram" },
-            { icon: <Linkedin />, label: "LinkedIn" },
-            { icon: <Mail />, label: "Email" }
+            { icon: <Instagram />, label: "Instagram", href: "https://www.instagram.com/aymid.r/" },
+            { icon: <Linkedin />, label: "LinkedIn", href: "https://www.linkedin.com/in/syedahmedrehmani" },
+            { icon: <Mail />, label: "Email", href: "mailto:syedahmedrehmani3@gmail.com" }
         ].map((social, i) => (
             <a 
                 key={i}
-                href="#" 
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center hover:bg-highlight hover:-translate-y-1 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                 title={social.label}
             >

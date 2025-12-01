@@ -46,7 +46,7 @@ export const Portfolio: React.FC = () => {
     <div className="space-y-12 relative z-10">
       <div className="flex flex-col md:flex-row justify-between items-end border-b-2 border-black border-dashed pb-4">
         <div>
-          <h2 className="text-5xl font-bold mb-2">Selected Work</h2>
+          <h2 className="text-5xl font-bold mb-2 text-accent-pink">Selected Work</h2>
           <p className="font-sans text-gray-600">Click a thumbnail to watch the edit.</p>
         </div>
         <div className="bg-black text-white px-4 py-1 rounded-full font-bold text-sm transform rotate-3">
@@ -56,23 +56,24 @@ export const Portfolio: React.FC = () => {
 
       {/* Featured Client Section */}
       <DoodleWrapper 
-        className="bg-accent-pink p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden" 
+        className="text-white p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden" 
         rotate={-1}
         hoverRotate={-1}
         borderColor="border-black"
+        bgColor="bg-black"
       >
         <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
           <Play size={120} fill="white" stroke="none" />
         </div>
         
         <div className="text-left relative z-10 text-white">
-          <div className="inline-block bg-black text-white text-xs font-bold px-3 py-1 mb-3 rounded transform -rotate-2 border border-white">
+          <div className="inline-block bg-highlight text-black text-xs font-bold px-3 py-1 mb-3 rounded transform -rotate-2 border border-black shadow-[2px_2px_0px_0px_white]">
             ★ FEATURED CLIENT
           </div>
-          <h3 className="text-3xl md:text-4xl font-black mb-1">Nolan (ReelyGlaze)</h3>
-          <p className="font-sans text-xl font-bold opacity-90 flex items-center gap-2">
+          <h3 className="text-3xl md:text-4xl font-black mb-1 text-white">Nolan (ReelyGlaze)</h3>
+          <p className="font-sans text-xl font-bold opacity-90 flex items-center gap-2 text-gray-200">
             2M+ Followers 
-            <span className="text-sm bg-white/20 px-2 py-0.5 rounded">TikTok Star</span>
+            <span className="text-sm bg-white/20 px-2 py-0.5 rounded text-white">TikTok Star</span>
           </p>
         </div>
 
@@ -80,7 +81,7 @@ export const Portfolio: React.FC = () => {
           href="https://www.tiktok.com/@reelyglaze" 
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-10 bg-white text-black px-6 py-3 font-bold text-lg rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center gap-2 whitespace-nowrap"
+          className="relative z-10 bg-white text-black px-6 py-3 font-bold text-lg rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_#c084fc] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#c084fc] transition-all flex items-center gap-2 whitespace-nowrap"
         >
           View Profile <ExternalLink size={18} />
         </a>
