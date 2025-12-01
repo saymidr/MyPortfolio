@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DoodleWrapper } from './DoodleWrapper';
-import { Play, X } from 'lucide-react';
+import { Play, X, ExternalLink, FolderOpen } from 'lucide-react';
 import { PortfolioItem } from '../types';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -54,6 +54,38 @@ export const Portfolio: React.FC = () => {
         </div>
       </div>
 
+      {/* Featured Client Section */}
+      <DoodleWrapper 
+        className="bg-accent-pink p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden" 
+        rotate={-1}
+        hoverRotate={-1}
+        borderColor="border-black"
+      >
+        <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+          <Play size={120} fill="white" stroke="none" />
+        </div>
+        
+        <div className="text-left relative z-10 text-white">
+          <div className="inline-block bg-black text-white text-xs font-bold px-3 py-1 mb-3 rounded transform -rotate-2 border border-white">
+            ★ FEATURED CLIENT
+          </div>
+          <h3 className="text-3xl md:text-4xl font-black mb-1">Nolan (ReelyGlaze)</h3>
+          <p className="font-sans text-xl font-bold opacity-90 flex items-center gap-2">
+            2M+ Followers 
+            <span className="text-sm bg-white/20 px-2 py-0.5 rounded">TikTok Star</span>
+          </p>
+        </div>
+
+        <a 
+          href="https://www.tiktok.com/@reelyglaze" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 bg-white text-black px-6 py-3 font-bold text-lg rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center gap-2 whitespace-nowrap"
+        >
+          View Profile <ExternalLink size={18} />
+        </a>
+      </DoodleWrapper>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item, idx) => (
           <DoodleWrapper 
@@ -94,6 +126,21 @@ export const Portfolio: React.FC = () => {
             </div>
           </DoodleWrapper>
         ))}
+      </div>
+
+      {/* View All Button */}
+      <div className="flex justify-center pt-8">
+        <a 
+          href="https://drive.google.com/drive/folders/1VLrS5u4jj7UHbt8iAsKab_Uy0quexhMA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex items-center gap-2 focus:outline-none focus:ring"
+        >
+          <span className="absolute inset-0 translate-x-2 translate-y-2 bg-black transition-transform group-hover:translate-y-1 group-hover:translate-x-1 rounded-lg"></span>
+          <span className="relative inline-flex items-center gap-2 border-2 border-black bg-highlight px-8 py-4 text-lg font-black uppercase tracking-wider text-black transition-transform rounded-lg group-hover:-translate-y-1 group-hover:-translate-x-1">
+            <FolderOpen size={24} /> View All Videos Archive
+          </span>
+        </a>
       </div>
 
       {/* Video Modal */}

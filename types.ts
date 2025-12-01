@@ -1,3 +1,6 @@
+// Fix: Import React to resolve namespace error
+import React from 'react';
+
 export interface ServiceItem {
   id: string;
   title: string;
